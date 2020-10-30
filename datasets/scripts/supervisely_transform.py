@@ -47,11 +47,22 @@ def transform(dataset_dir):
     img_count = 0
     for filename in filenames:
         img_path = os.path.join(img_dir, filename)
+        print(img_path)
         name, extension = os.path.splitext(filename)
         out_img_filename = name + '.jpg'
         if extension == ".jpeg":
           filename = name + '.png'
         mask_path = os.path.join(mask_dir, filename)
+        print(mask_path)
+        name1, extension1 = os.path.splitext(filename)
+        print(name1)
+        print(extension1)
+
+        if extension1 == ".bmp":
+            filename = name1 + '.png'
+        print(filename)
+        mask_path = os.path.join(mask_dir, filename)
+        print(mask_path)
         if not os.path.exists(mask_path):
           raise Exception('Mask not exist: %s' % mask_path)
 
@@ -74,7 +85,10 @@ def transform(dataset_dir):
         mask_data = np.asarray(mask_img, dtype=np.uint8).copy()
         org_shape = mask_data.shape
         mask_data = mask_data.reshape(-1)
-        mask_data[mask_data > 0] = PEOPLE_TAG 
+        mask_data[mask_data == (208, 2, 27)] = carrot_leaves
+        mask_data[mask_data == (245, 166, 35)] = weed_leaves
+        mask_data[mask_data == (74, 144, 226)] = weed_rootpoint
+
         mask_data = mask_data.reshape(org_shape)
         mask_img = Image.fromarray(mask_data.astype(dtype=np.uint8))
         # save
@@ -98,7 +112,7 @@ def run(dataset_dir, val_ratio):
 
 def parse_args():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--dataset_dir", type=str, default='dataset',
+    parser.add_argument("--dataset_dir", type=str, default='/home/lehar/Downloads/Batch_1_training_ds_spatialAI/images',
                         help="dataset directory")
     parser.add_argument("--val_ratio", type=float, default=0.1,
                         help="validation set ratio")
