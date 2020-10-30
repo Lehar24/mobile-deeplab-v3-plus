@@ -39,7 +39,7 @@ python run.py --dataset_dir="${DATASET_FOLDER_CONVERTED}"\
   --model_type="${MODEL_TYPE}" \
   --base_learning_rate=0.007 \
   --num_clones=1 \
-  --training_number_of_steps=40000 \
+  --training_number_of_steps=10000 \
   --pretrained_backbone_model_dir="${PRETRAINED_BACKBONE_MODEL_DIR}"
 
 #  --pretrained_model_dir="${PRETRAINED_MODEL_DIR}" \
