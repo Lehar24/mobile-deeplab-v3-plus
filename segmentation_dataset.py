@@ -56,9 +56,9 @@ _ODDBOT_DATASET_INFORMATION = DatasetDescriptor(
     subset_to_sizes={
         'train': 45,
         'val': 6,
-        'trainval': 51,
+        #'trainval': 51,
     },
-    num_classes=3,
+    num_classes=4,
     ignore_label=255,
 )
 
