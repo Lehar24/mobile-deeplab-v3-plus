@@ -242,8 +242,8 @@ class SegmentationDataset(object):
 
 if __name__ == '__main__':
     dataset = SegmentationDataset(
-        "pascal_voc2012",
-        "datasets/pascal_voc2012/tfrecord",
+        "/content/mobile-deeplab-v3-plus/datasets/scripts/Batch_1_training_ds_spatialAI/images",
+        "/content/mobile-deeplab-v3-plus/datasets/scripts/output/segmentation",
         "train",
         512,
         512)
