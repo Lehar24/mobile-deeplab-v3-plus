@@ -10,7 +10,11 @@ from sklearn.model_selection import train_test_split
 
 MAX_HEIGHT=1024
 MAX_WIDTH=1024
-PEOPLE_TAG = 1
+
+#class IDs
+carrot_leaves=125
+weed_leaves=124
+weed_rootpoint=123
 
 OUTPUT_DIR = 'output'
 
