@@ -52,10 +52,22 @@ _PEOPLE_SEGMENTATION_INFORMATION = DatasetDescriptor(
     ignore_label=255,
 )
 
+_ODDBOT_DATASET_INFORMATION = DatasetDescriptor(
+    subset_to_sizes={
+        'train': 45,
+        'val': 6,
+        'trainval': 51,
+    },
+    num_classes=3,
+    ignore_label=255,
+)
+
+
 
 _DATASETS_INFORMATION = {
     'pascal_voc2012': _PASCAL_VOC_2012_INFORMATION,
     'people_segmentation': _PEOPLE_SEGMENTATION_INFORMATION,
+    '/content/mobile-deeplab-v3-plus/datasets/scripts/Batch_1_training_ds_spatialAI/images': _ODDBOT_DATASET_INFORMATION
 }
 
 # Default file pattern of TFRecord of TensorFlow Example.
