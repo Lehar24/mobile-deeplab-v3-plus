@@ -112,7 +112,7 @@ def run(dataset_dir, val_ratio):
 
 def parse_args():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--dataset_dir", type=str, default='/My Drive/openCV dataset/Batch_1_training_ds_spatialAI/images',
+    parser.add_argument("--dataset_dir", type=str, default='/content/gdrive/My Drive/openCV dataset/Batch_1_training_ds_spatialAI/images',
                         help="dataset directory")
     parser.add_argument("--val_ratio", type=float, default=0.1,
                         help="validation set ratio")
