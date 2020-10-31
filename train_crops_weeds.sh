@@ -26,7 +26,7 @@ python3 supervisely_transform.py
 cd "${CURRENT_DIR}"
 
 # Set up the working directories.
-DATASET_FOLDER="scripts/output"
+DATASET_FOLDER="output"
 EXP_FOLDER="exp"
 TRAIN_LOGDIR="${WORK_DIR}/${DATASET_DIR}/${DATASET_FOLDER}/${EXP_FOLDER}/${MODEL_TYPE}/train"
 mkdir -p "${TRAIN_LOGDIR}"
