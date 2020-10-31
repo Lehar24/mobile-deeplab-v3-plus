@@ -68,7 +68,7 @@ _ODDBOT_DATASET_INFORMATION = DatasetDescriptor(
 _DATASETS_INFORMATION = {
     'pascal_voc2012': _PASCAL_VOC_2012_INFORMATION,
     'people_segmentation': _PEOPLE_SEGMENTATION_INFORMATION,
-    '/content/mobile-deeplab-v3-plus/datasets/scripts/Batch_1_training_ds_spatialAI/images': _ODDBOT_DATASET_INFORMATION
+    'output': _ODDBOT_DATASET_INFORMATION
 }
 
 # Default file pattern of TFRecord of TensorFlow Example.
