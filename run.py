@@ -106,8 +106,8 @@ flags.DEFINE_string('dataset_name', None,
                     '[pascal_voc2012|people_segmentation '
                     'Name of the segmentation dataset.')
 
-flags.DEFINE_string('train_subset', 'trainaug',
-                    'Which split of the dataset to be used for training')
+#flags.DEFINE_string('train_subset', 'trainaug',
+#                    'Which split of the dataset to be used for training')
 
 flags.DEFINE_string('val_subset', 'val',
                     'Which split of the dataset to be used for training')
