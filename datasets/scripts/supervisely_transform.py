@@ -38,13 +38,11 @@ def split_dataset(filenames, val_ratio):
 def transform(dataset_dir):
     output_img_dir = OUTPUT_DIR + '/images'
     output_mask_dir = OUTPUT_DIR + '/masks'
-    output_trainaug_dir = OUTPUT_DIR + '/trainaug'
+    trainaug_text_file = open(OUTPUT_DIR + '/trainaug.txt', 'w')
     if not os.path.exists(output_img_dir):
         os.makedirs(output_img_dir)
     if not os.path.exists(output_mask_dir):
-        os.makedirs(output_mask_dir)
-    if not os.path.exists(output_trainaug_dir):
-        os.makedirs(output_trainaug_dir)    
+        os.makedirs(output_mask_dir)  
 
     img_dir = 'img'
     mask_dir = 'masks_machine'
@@ -106,7 +104,7 @@ def transform(dataset_dir):
         # save
         out_img_path = os.path.join(output_img_dir, out_img_filename)
         out_mask_path = os.path.join(output_mask_dir, filename)
-        os.path.join(output_trainaug_dir, name3)
+        trainaug_text_file.write("%s\n" % name3)
         with open(out_img_path, 'w') as f:
             org_img.convert('RGB').save(out_img_path, 'JPEG')
         with open(out_mask_path, 'w') as f:
