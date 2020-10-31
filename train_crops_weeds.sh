@@ -18,7 +18,7 @@ WORK_DIR="${CURRENT_DIR}"
 # python "${WORK_DIR}"/deeplab_v3_plus_test.py -v
 
 # Go to datasets folder and download PASCAL VOC 2012 segmentation dataset.
-DATASET_DIR="datasets/scripts/output"                                                       #already converted
+DATASET_DIR="datasets"                                                       #already converted
 #cd "${WORK_DIR}/${DATASET_DIR}"
 #sh download_and_convert_voc2012.sh
 
@@ -26,12 +26,12 @@ DATASET_DIR="datasets/scripts/output"                                           
 cd "${CURRENT_DIR}"
 
 # Set up the working directories.
-DATASET_FOLDER="segmentation"
+DATASET_FOLDER="scripts/output"
 EXP_FOLDER="exp"
 TRAIN_LOGDIR="${WORK_DIR}/${DATASET_DIR}/${DATASET_FOLDER}/${EXP_FOLDER}/${MODEL_TYPE}/train"
 mkdir -p "${TRAIN_LOGDIR}"
 
-DATASET_FOLDER_CONVERTED="${WORK_DIR}/${DATASET_DIR}/${DATASET_FOLDER}"
+DATASET_FOLDER_CONVERTED="${WORK_DIR}/${DATASET_DIR}/${DATASET_FOLDER}/tfrecord"
 
 python run.py --dataset_dir="${DATASET_FOLDER_CONVERTED}"\
   --dataset_name="/content/mobile-deeplab-v3-plus/datasets/scripts/Batch_1_training_ds_spatialAI/images" \
