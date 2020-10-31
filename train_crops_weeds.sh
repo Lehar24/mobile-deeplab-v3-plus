@@ -34,7 +34,7 @@ mkdir -p "${TRAIN_LOGDIR}"
 DATASET_FOLDER_CONVERTED="${WORK_DIR}/${DATASET_DIR}/${DATASET_FOLDER}/segmentation"
 
 python run.py --dataset_dir="${DATASET_FOLDER_CONVERTED}"\
-  --dataset_name="/content/mobile-deeplab-v3-plus/datasets/scripts/Batch_1_training_ds_spatialAI/images" \
+  --dataset_name="output" \
   --logdir="${TRAIN_LOGDIR}" \
   --model_type="${MODEL_TYPE}" \
   --base_learning_rate=0.007 \
