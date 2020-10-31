@@ -109,6 +109,9 @@ flags.DEFINE_string('dataset_name', None,
 #flags.DEFINE_string('train_subset', 'trainaug',
 #                    'Which split of the dataset to be used for training')
 
+flags.DEFINE_string('train_subset', 'train',
+                    'Which split of the dataset to be used for training')
+
 flags.DEFINE_string('val_subset', 'val',
                     'Which split of the dataset to be used for training')
 
