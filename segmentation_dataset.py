@@ -57,6 +57,7 @@ _ODDBOT_DATASET_INFORMATION = DatasetDescriptor(
         'train': 45,
         'val': 6,
         #'trainval': 51,
+        'trainaug': 51,
     },
     num_classes=4,
     ignore_label=255,
