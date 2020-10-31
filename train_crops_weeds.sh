@@ -3,7 +3,7 @@
 # Exit immediately if a command exits with a non-zero status.
 set -e
 
-#export CUDA_VISIBLE_DEVICES=''
+export CUDA_VISIBLE_DEVICES=''
 # Update PYTHONPATH.
 export PYTHONPATH=$PYTHONPATH:`pwd`
 
