@@ -18,7 +18,7 @@ WORK_DIR="${CURRENT_DIR}"
 # python "${WORK_DIR}"/deeplab_v3_plus_test.py -v
 
 # Go to datasets folder and download PASCAL VOC 2012 segmentation dataset.
-DATASET_DIR="/datasets/scripts"                                                       #already converted
+DATASET_DIR="datasets/scripts"                                                       #already converted
 cd "${WORK_DIR}/${DATASET_DIR}"
 python3 supervisely_transform.py
 
